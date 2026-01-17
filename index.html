@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#5a7a5a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Seguimiento de Nogales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1> Seguimiento de Nogales</h1>
+        <p class="subtitle">Sistema de medición semanal con comparativa de crecimiento</p>
+
+        <div class="form-grid">
+            <div class="form-section">
+                <label for="sitio">Sitio</label>
+                <select id="sitio">
+                    <option value="">Seleccionar sitio...</option>
+                    <option value="Lomas de Leyda">Lomas de Leyda</option>
+                    <option value="Albolera">Albolera</option>
+                </select>
+            </div>
+
+            <div class="form-section">
+                <label for="area">Área</label>
+                <input type="text" id="area" placeholder="Ej: Zona Norte, Cuartel 3...">
+            </div>
+
+            <div class="form-section">
+                <label for="sector">Sector</label>
+                <input type="text" id="sector" placeholder="Ej: Capilla, Sector A...">
+            </div>
+        </div>
+
+        <div class="measurements-label">Mediciones (mm) - 12 frutos</div>
+        <div class="measurements-grid" id="measurements-grid"></div>
+
+        <div class="buttons">
+            <button class="btn btn-primary" onclick="guardarMedicion()">Guardar Medición</button>
+            <button class="btn btn-secondary" onclick="limpiarFormulario()">Limpiar Formulario</button>
+            <button class="btn btn-danger" onclick="borrarTodoHistorial()">Borrar Todo el Historial</button>
+        </div>
+
+        <div class="history-section">
+            <div class="history-header">
+                <h2>Historial de Mediciones</h2>
+            </div>
+            <div id="history-container"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
